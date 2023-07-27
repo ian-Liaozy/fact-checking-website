@@ -1,4 +1,4 @@
-require('./db.js');
+const db = require('./db.js');
 const mongoose = require('mongoose');
 const Keyword = mongoose.model('Keyword');
 const passport = require('passport');
@@ -35,4 +35,4 @@ app.use('/news', news);
 app.listen(process.env.PORT || 3001);
 
 exports.app = app;
-// exports.default = app;
+exports.default = app;
