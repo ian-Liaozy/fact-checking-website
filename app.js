@@ -32,4 +32,7 @@ app.use('/keywords', keywords);
 app.use('/news', news);
 
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3001);
+
+exports.app = app;
+// exports.default = app;
