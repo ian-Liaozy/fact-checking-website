@@ -96,7 +96,6 @@ An Example News Items:
 
 ## Annotations / References Used
 
-(__TODO__: list any tutorials/references/etc. that you've based your code off of_)
 
 1. [Introduction on News API](https://newsapi.org/docs)
 2. [Chart.js](https://www.chartjs.org/docs/latest/)

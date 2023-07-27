@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === 'PRODUCTION') {
 	dbconf = conf.dbconf;
 } else {
 	// if we're not in PRODUCTION mode, then use
-	dbconf = 'mongodb://localhost/finalprojectconfig';
+	dbconf = 'mongodb+srv://zl3057:ian@cluster0.4usnwgg.mongodb.net/';
 }
 // Keyword.plugin(passportLocalMongoose);
 // News.plugin(URLSlugs('name'));
