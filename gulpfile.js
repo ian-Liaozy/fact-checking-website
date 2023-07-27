@@ -12,8 +12,9 @@ gulp.task('sass', function() {
 });
 
 gulp.task('build', function() {
-    let server = gls.new('./app.js');
-    return server.start();
+    // let server = gls.new('./app.js');
+    // return server.start();
+    app;
 })
 
 gulp.task('default', gulp.series('sass', 'build', function() { console.log('default task') }));
@@ -21,8 +22,8 @@ gulp.task('default', gulp.series('sass', 'build', function() { console.log('defa
 
 
 // gulp.task('build', function() {')
-exports.watch = function () {
-    gulp.watch('./sass/**/*.scss', ['sass']);
-};
-exports.default = series('default');
+// exports.watch = function () {
+//     gulp.watch('./sass/**/*.scss', ['sass']);
+// };
+exports.default = 'default';
 
