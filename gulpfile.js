@@ -4,10 +4,8 @@
 const { series } = require('gulp');
 
 const gulp = require('gulp');
-const gls = require('gulp-live-server');
-const sass = require('gulp-sass')(require('sass'));
+// const sass = require('gulp-sass')(require('sass'));
 const app = require('./app.js');
-const clean = require('gulp-clean');
 // const nodemon = require("gulp-nodemon");
 // const server = require('browser-sync').create();
 
