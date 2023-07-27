@@ -1,39 +1,46 @@
+'use strict';
+
+
 const { series } = require('gulp');
 
 const gulp = require('gulp');
-let gls = require('gulp-live-server');
+const gls = require('gulp-live-server');
 const sass = require('gulp-sass')(require('sass'));
 const app = require('./app.js');
 const clean = require('gulp-clean');
-
-
-gulp.task('clean', function() {
-    return gulp.src('./public/**/*.css', { read: false })
-        .pipe(clean());
-});
-
-gulp.task('compile', function() {
-    return gulp.src('./sass/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css'));
-});
+// const nodemon = require("gulp-nodemon");
+// const server = require('browser-sync').create();
 
 
 
 
-gulp.task('build', series("clean", "compile", function() {
+
+// gulp.task('compile', function() {
+//     return gulp.src('./sass/**/*.scss')
+//         .pipe(sass().on('error', sass.logError))
+//         .pipe(gulp.dest('./css'));
+// });
+
+// function buildStyles() {
+//     return gulp.src('./sass/**/*.scss')
+//       .pipe(sass().on('error', sass.logError))
+//       .pipe(gulp.dest('./css'));
+//   };
+
+// exports.buildStyles = buildStyles;
+
+// exports.watch = function () {
+// gulp.watch('./sass/**/*.scss', buildStyles);
+// };
+
+gulp.task('build', function(done) {
     // let server = gls.new('./app.js');
     // return server.start();
     app.default(); // run the app
-}));
+    done();
+});
 
 gulp.task('default', series('build'));
 
-
-
-// gulp.task('build', function() {')
-// exports.watch = function () {
-//     gulp.watch('./sass/**/*.scss', ['sass']);
-// };
 exports.default = 'default';
 

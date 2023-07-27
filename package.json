@@ -10,19 +10,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nyu-csci-ua-0467-001-002-spring-2022/final-project-template.git"
+    "url": "git+https://github.com/ian-Liaozy/fact-checking-website.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/nyu-csci-ua-0467-001-002-spring-2022/final-project-template/issues"
+    "url": "https://github.com/ian-Liaozy/fact-checking-website/issues"
   },
-  "homepage": "https://github.com/nyu-csci-ua-0467-001-002-spring-2022/final-project-template#readme",
+  "homepage": "https://github.com/ian-Liaozy/fact-checking-website/#readme",
   "dependencies": {
+    "browser-sync": "^2.29.3",
     "express": "^4.17.3",
     "express-session": "^1.17.2",
     "gulp-clean": "^0.4.0",
     "gulp-live-server": "^0.0.31",
+    "gulp-nodemon": "^2.5.0",
     "hbs": "^4.2.0",
     "less": "^4.1.2",
     "mongoose": "^6.2.7",
