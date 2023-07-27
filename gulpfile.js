@@ -4,20 +4,30 @@ const gulp = require('gulp');
 let gls = require('gulp-live-server');
 const sass = require('gulp-sass')(require('sass'));
 const app = require('./app.js');
+const clean = require('gulp-clean');
 
-gulp.task('sass', function() {
+
+gulp.task('clean', function() {
+    return gulp.src('./public/**/*.css', { read: false })
+        .pipe(clean());
+});
+
+gulp.task('compile', function() {
     return gulp.src('./sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./css'));
 });
 
-gulp.task('build', function() {
+
+
+
+gulp.task('build', series("clean", "compile", function() {
     // let server = gls.new('./app.js');
     // return server.start();
-    app;
-})
+    app.default(); // run the app
+}));
 
-gulp.task('default', gulp.series('sass', 'build', function() { console.log('default task') }));
+gulp.task('default', series('build'));
 
 
 
